@@ -14,7 +14,7 @@ export default defineConfig(({ mode }) => ({
   },
     preview: {
     host: "::",
-    port: 8080,
+    port: process.env.PORT || 8080,
     allowedHosts: ["agroledger-a3g5.onrender.com"],
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
